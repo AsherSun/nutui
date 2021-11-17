@@ -12,7 +12,7 @@
           v-for="item in list"
           :key="item.name"
           :class="{ 'title-item': true, disabled: item.disabled }"
-          @click="chooseItem(e, item)"
+          @click="chooseItem($event, item)"
         >
           <slot v-if="item.icon"> <nut-icon class="item-img" :name="item.icon"></nut-icon></slot>
           <view class="title-name">{{ item.name }}</view>
